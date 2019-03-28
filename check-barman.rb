@@ -68,7 +68,7 @@ def check_pg(server)
 end
 
 def check_backups_available(server, warning, critical)
-  return_code = 0
+  return_code = 2
   count = Backups.all(server).count
   if count == 0
     p "No backups available!"
